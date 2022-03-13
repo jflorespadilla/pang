@@ -1,10 +1,10 @@
 # pang
 Following an online tutorial series by GamesFromScratch
 
-#Note:
+# Note:
 Manually building SFML proved to be a headache. An alternative solution was found in the form of vcpkg.
 
-#Getting SFML
+# Getting SFML
 
 The folllowing commands made life easier to follow the tutorial.
 
