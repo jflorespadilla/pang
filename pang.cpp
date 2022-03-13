@@ -1,5 +1,8 @@
-#include <iostream>
+#include "Game.h"
 
-int main(){
-    std::cout << "Hello World!\n";
+
+int main(int argc, char** argv) {
+	Game::Start();
+
+	return 0;
 }
