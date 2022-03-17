@@ -6,7 +6,7 @@ void Game::Start() {
 	}
 
 	_mainWindow.create(sf::VideoMode(1024, 768, 32), "Pang!");
-	_gameState = Game::Playing;
+	_gameState = Game::ShowingSplash;
 
 	while (!IsExiting()) {
 		GameLoop();
@@ -23,17 +23,51 @@ bool Game::IsExiting() {
 
 void Game::GameLoop() {
 	sf::Event currentEvent;
-	while (_mainWindow.pollEvent(currentEvent)) {
-		switch (_gameState) {
-		case Game::Playing:
-			_mainWindow.clear(sf::Color(255, 0, 0));
-			_mainWindow.display();
+		
+	switch (_gameState) {
+		case Game::showingMenu:
+			ShowMenu();
+			break;
 
-			if (currentEvent.type == sf::Event::Closed) {
-				_gameState = Game::Exiting;
+		case Game::ShowingSplash:
+			ShowSpashScreen();
+			break;
+
+		case Game::Playing:
+			sf::Event currentEvent;
+			while (_mainWindow.pollEvent(currentEvent)) {
+				_mainWindow.clear(sf::Color(0, 0, 0));
+				_mainWindow.display();
+				if (currentEvent.type == sf::Event::Closed) {
+					_gameState = Game::Exiting;
+				}
+				if (currentEvent.type == sf::Event::KeyPressed) {
+					if (currentEvent.key.code == sf::Keyboard::Escape) {
+						ShowMenu();
+					}
+				}
 			}
 			break;
-		}
+	}
+}
+
+void Game::ShowSpashScreen() {
+	SplashScreen splashScreen;
+	splashScreen.Show(_mainWindow);
+	_gameState = Game::showingMenu;
+}
+
+void Game::ShowMenu() {
+	MainMenu mainMenu;
+	MainMenu::MenuResult result = mainMenu.Show(_mainWindow);
+	switch (result)
+	{
+	case MainMenu::Exit:
+		_gameState = Game::Exiting;
+		break;
+	case MainMenu::Play:
+		_gameState = Game::Playing;
+		break;
 	}
 }
 

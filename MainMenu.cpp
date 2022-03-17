@@ -42,3 +42,18 @@ MainMenu::MenuResult MainMenu::HandleClick(int x, int y) {
 
     return Nothing;
 }
+
+MainMenu::MenuResult MainMenu::GetMenuResponse(sf::RenderWindow& renderWindow) {
+    sf::Event menuEvent;
+
+    while (true) {
+        while (renderWindow.pollEvent(menuEvent)) {
+            if (menuEvent.type == sf::Event::MouseButtonPressed) {
+                return HandleClick(menuEvent.mouseButton.x, menuEvent.mouseButton.y);
+            }
+            if (menuEvent.type == sf::Event::Closed) {
+                return Exit;
+            }
+        }
+    }
+}
