@@ -2,7 +2,7 @@
 
 MainMenu::MenuResult MainMenu::Show(sf::RenderWindow& renderWindow) {
     sf::Texture image;
-    image.loadFromFile("SplashScreen.png");
+    image.loadFromFile("MainMenu.png");
     sf::Sprite sprite(image);
 
     MenuItem playButton;
