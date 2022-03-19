@@ -20,7 +20,7 @@ MainMenu::MenuResult MainMenu::Show(sf::RenderWindow& renderWindow) {
     exitButton.action = Exit;
 
     _menuItems.push_back(playButton);
-    _menuItems.push_back(playButton);
+    _menuItems.push_back(exitButton);
 
     renderWindow.draw(sprite);
     renderWindow.display();
@@ -34,7 +34,7 @@ MainMenu::MenuResult MainMenu::HandleClick(int x, int y) {
 
     for (it = _menuItems.begin(); it != _menuItems.end(); it++) {
         sf::Rect<int> menuItemRect = (*it).rect;
-        if (menuItemRect.top < y && menuItemRect.height - menuItemRect.top > y
+        if (menuItemRect.top < y && menuItemRect.top + menuItemRect.height  > y
             && menuItemRect.left < x && menuItemRect.width > x) {
             return (*it).action;
         }

@@ -23,7 +23,7 @@ bool Game::IsExiting() {
 
 void Game::GameLoop() {
 	sf::Event currentEvent;
-		
+	
 	switch (_gameState) {
 		case Game::showingMenu:
 			ShowMenu();
