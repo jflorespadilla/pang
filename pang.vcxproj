@@ -156,12 +156,14 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="MainMenu.cpp" />
     <ClCompile Include="pang.cpp" />
+    <ClCompile Include="PlayerPaddle.cpp" />
     <ClCompile Include="SplashScreen.cpp" />
     <ClCompile Include="VisibleGameObject.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="MainMenu.h" />
+    <ClInclude Include="PlayerPaddle.h" />
     <ClInclude Include="SplashScreen.h" />
     <ClInclude Include="VisibleGameObject.h" />
   </ItemGroup>
