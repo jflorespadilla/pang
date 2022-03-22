@@ -4,6 +4,7 @@
 #include "SplashScreen.h"
 #include "MainMenu.h"
 #include "PlayerPaddle.h"
+#include "GameObjectManager.h"
 
 class Game {
 public:
@@ -20,6 +21,7 @@ private:
 									showingMenu, Playing, Exiting };
 	static GameState _gameState;
 	static sf::RenderWindow _mainWindow;
-	static PlayerPaddle _player1;
+	static GameObjectManager _gameObjectManager;
+
 };
 
