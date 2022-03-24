@@ -20,6 +20,16 @@ void Game::Start() {
 	_mainWindow.close();
 }
 
+sf::RenderWindow& Game::GetWindow() {
+	return _mainWindow;
+}
+
+sf::Time& Game::GetElapsedTime() {
+	sf::Time time = _clock.getElapsedTime();
+	_clock.restart();
+	return time;
+}
+
 bool Game::IsExiting() {
 	return _gameState == Game::Exiting;
 }

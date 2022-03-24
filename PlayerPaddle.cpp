@@ -23,13 +23,13 @@ float PlayerPaddle::GetVelocity() const {
 }
 
 void PlayerPaddle::Update(float elapsedTime) {
-	if (Game::GetInput().IsKeyDown(sf::Keyboard::Left)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
 		_velocity -= 3.0f;
 	}
-	if (Game::GetInput().IsKeyDown(sf::Keyboard::Right)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
 		_velocity += 3.0f;
 	}
-	if (Game::GetInput().IsKeyDown(sf::Keyboard::Down)) {
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
 		_velocity -= 0.0f;
 	}
 
@@ -42,7 +42,7 @@ void PlayerPaddle::Update(float elapsedTime) {
 
 	sf::Vector2f pos = this->GetPosition();
 	if (pos.x < GetSprite().getScale().x/2
-		|| pos.x > (Game::SCREEN_WIDTH - GetSprite().getScale()/2))
+		|| pos.x > (Game::SCREEN_WIDTH - GetSprite().getScale().x/2))
 	{
 		_velocity - _velocity;
 	}

@@ -10,7 +10,7 @@ class Game {
 public:
 	static void Start();
 	static sf::RenderWindow& GetWindow();
-	const static sf::Keyboard& GetInput();
+	static sf::Time& GetElapsedTime();
 	const static int SCREEN_WIDTH = 1024;
 	const static int SCREEN_HEIGHT = 768;
 
@@ -25,6 +25,7 @@ private:
 									showingMenu, Playing, Exiting };
 	static GameState _gameState;
 	static sf::RenderWindow _mainWindow;
+	static sf::Clock _clock;
 	static GameObjectManager _gameObjectManager;
 
 };
