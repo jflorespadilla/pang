@@ -4,6 +4,7 @@
 #include "SplashScreen.h"
 #include "MainMenu.h"
 #include "PlayerPaddle.h"
+#include "GameBall.h"
 #include "GameObjectManager.h"
 
 class Game {
@@ -27,6 +28,5 @@ private:
 	static sf::RenderWindow _mainWindow;
 	static sf::Clock _clock;
 	static GameObjectManager _gameObjectManager;
-
 };
 

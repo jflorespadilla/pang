@@ -1,4 +1,5 @@
 #include "GameObjectManager.h"
+#include "Game.h"
 
 GameObjectManager::GameObjectManager() {
 
