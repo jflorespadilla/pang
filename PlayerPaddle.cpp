@@ -30,7 +30,7 @@ void PlayerPaddle::Update(float elapsedTime) {
 		_velocity += 3.0f;
 	}
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
-		_velocity -= 0.0f;
+		_velocity = 0.0f;
 	}
 
 	if (_velocity > _maxVelocity) {
