@@ -2,6 +2,7 @@
 #include <string>
 #include<SFML/Graphics.hpp>
 
+// Starting late night coing here
 class VisibleGameObject {
 public:
 	VisibleGameObject();
