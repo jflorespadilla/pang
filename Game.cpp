@@ -12,6 +12,7 @@ void Game::Start() {
 	player1->SetPosition((SCREEN_WIDTH/2), 700);
 
 	GameBall* ball = new GameBall();
+	ball->Load("ball.png");
 	ball->SetPosition((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 15);
 
 	_gameObjectManager.Add("Paddle1", player1);
@@ -33,6 +34,10 @@ sf::Time& Game::GetElapsedTime() {
 	sf::Time time = _clock.getElapsedTime();
 	_clock.restart();
 	return time;
+}
+
+GameObjectManager Game::GetGameObjectManager() {
+	return _gameObjectManager;
 }
 
 bool Game::IsExiting() {

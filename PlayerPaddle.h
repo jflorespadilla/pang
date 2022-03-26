@@ -1,6 +1,5 @@
 #pragma once
 #include "VisibleGameObject.h"
-#include "Game.h"
 #include <cassert>
 
 class PlayerPaddle : public VisibleGameObject {

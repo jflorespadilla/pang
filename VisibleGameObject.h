@@ -2,7 +2,6 @@
 #include <string>
 #include<SFML/Graphics.hpp>
 
-// Starting late night coing here
 class VisibleGameObject {
 public:
 	VisibleGameObject();
@@ -14,6 +13,9 @@ public:
 
 	virtual void SetPosition(float x, float y);
 	virtual sf::Vector2f GetPosition() const;
+	virtual float GetWidth() const;
+	virtual float GetHeight() const;
+	virtual sf::Rect<float> GetBoundingRect() const;
 	virtual bool IsLoaded() const;
 
 protected:

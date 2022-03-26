@@ -1,4 +1,5 @@
 #include "PlayerPaddle.h"
+#include "Game.h"
 
 PlayerPaddle::PlayerPaddle() :
 	_velocity(0),
