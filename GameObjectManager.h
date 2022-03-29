@@ -1,5 +1,7 @@
 #pragma once
 #include "VisibleGameObject.h"
+#include <map>
+#include <iterator>
 
 class GameObjectManager {
 public:

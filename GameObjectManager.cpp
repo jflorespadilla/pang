@@ -45,7 +45,6 @@ void GameObjectManager::UpdateAll() {
 	std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
 	float timeDelta = Game::GetElapsedTime().asSeconds();
 
-	// Logic to fix
 	while (itr != _gameObjects.end()) {
 		itr->second->Update(timeDelta);
 		itr++;
