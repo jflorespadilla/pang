@@ -10,7 +10,7 @@ GameObjectManager::~GameObjectManager() {
 }
 
 void GameObjectManager::Add(std::string name, VisibleGameObject* gameObject) {
-	_gameObjects.insert(std::pair<std::string, VisibleGameObject*>(name, gameObject));
+	_gameObjects.insert(std::make_pair(name, gameObject));
 }
 
 void GameObjectManager::Remove(std::string name) {
