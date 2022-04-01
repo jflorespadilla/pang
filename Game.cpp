@@ -14,10 +14,9 @@ void Game::Start() {
 	//player2->SetPosition((SCREEN_WIDTH / 2), (SCREEN_HEIGHT) / 2);
 
 	GameBall* ball = new GameBall();
+	ball->Load("ball.png");
 	ball->SetPosition((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 15);
 
-
-	// Unsure of what's going wrong in insert.
 	_gameObjectManager.Add("Paddle1", player1);
 	//_gameObjectManager.Add("Paddle2", player2);
 	_gameObjectManager.Add("Ball", ball);
