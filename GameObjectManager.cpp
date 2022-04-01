@@ -34,19 +34,24 @@ int GameObjectManager::GameObjectCount() const {
 }
 
 void GameObjectManager::DrawAll(sf::RenderWindow& renderWindow) {
-	std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
+	/*std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
 	while (itr != _gameObjects.end()) {
 		itr->second->Draw(renderWindow);
 		itr++;
-	}
+	}*/
+	ball->Draw(renderWindow);
+	paddle1->Draw(renderWindow);
 }
 
 void GameObjectManager::UpdateAll() {
-	std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
+	// std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
 	float timeDelta = Game::GetElapsedTime().asSeconds();
 
-	while (itr != _gameObjects.end()) {
+	ball->Update(timeDelta);
+	paddle1->Update(timeDelta);
+
+	/*while (itr != _gameObjects.end()) {
 		itr->second->Update(timeDelta);
 		itr++;
-	}
+	}*/
 }

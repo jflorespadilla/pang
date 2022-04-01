@@ -45,7 +45,7 @@ void PlayerPaddle::Update(float elapsedTime) {
 	if (pos.x < GetSprite().getScale().x/2
 		|| pos.x > (Game::SCREEN_WIDTH - GetSprite().getScale().x/2))
 	{
-		_velocity - _velocity;
+		_velocity = -_velocity;
 	}
 	GetSprite().move(_velocity * elapsedTime, 0);
 }

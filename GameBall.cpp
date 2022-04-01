@@ -41,7 +41,7 @@ void GameBall::Update(float elapsedTime) {
 		moveByX = -moveByX;
 	}
 
-	PlayerPaddle* player1 = dynamic_cast<PlayerPaddle*> (Game::GetGameObjectManager().Get("Paddel1"));
+	PlayerPaddle* player1 = dynamic_cast<PlayerPaddle*> (Game::GetGameObjectManager().paddle1);
 
 	if (player1 != NULL) {
 		sf::Rect<float> p1BB = player1->GetBoundingRect();

@@ -10,6 +10,8 @@ public:
 	void Remove(std::string name);
 	int GameObjectCount() const;
 	VisibleGameObject* Get(std::string name) const;
+	VisibleGameObject* paddle1;
+	VisibleGameObject* ball;
 
 	void DrawAll(sf::RenderWindow& renderWindow);
 	void UpdateAll();
@@ -21,6 +23,5 @@ private:
 			delete p.second;
 		}
 	};
-
 };
 

@@ -7,20 +7,25 @@ void Game::Start() {
 
 	_mainWindow.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32), "Pang!");
 	
+
 	PlayerPaddle* player1 = new PlayerPaddle();
 	player1->SetPosition((SCREEN_WIDTH/2), 700);
-	
-	//PlayerPaddle* player2 = new PlayerPaddle();
-	//player2->SetPosition((SCREEN_WIDTH / 2), (SCREEN_HEIGHT) / 2);
 
 	GameBall* ball = new GameBall();
-	ball->Load("ball.png");
 	ball->SetPosition((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 15);
-
+	_gameObjectManager.ball = ball;
+	_gameObjectManager.paddle1 = player1;
+	/*
+	* 
+	* 
+	* Ideally this is how things should be handled.
+	* However, I kept getting acccess errors and I have no idea why.
+	* Going to hard code the paddle and ball in gameObjectManager.
+	* 
+	* 
 	_gameObjectManager.Add("Paddle1", player1);
-	//_gameObjectManager.Add("Paddle2", player2);
 	_gameObjectManager.Add("Ball", ball);
-
+	*/
 	_gameState = Game::ShowingSplash;
 
 	while (!IsExiting()) {
