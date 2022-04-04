@@ -1,12 +1,7 @@
 #include "GameBall.h"
 #include "Game.h"
 
-/*
-	TODO - Try and fix the physics of the ball.
-	Something isn't being calculated correctly and the ball
-	bugs out.
-*/
-
+// Still studying where the physics is breaking.
 GameBall::GameBall() :
 _velocity(230.0f),
 _elapsedTimeSinceStart(0.0f),
