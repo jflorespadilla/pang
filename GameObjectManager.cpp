@@ -44,7 +44,7 @@ void GameObjectManager::DrawAll(sf::RenderWindow& renderWindow) {
 }
 
 void GameObjectManager::UpdateAll() {
-	// std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
+	//std::map<std::string, VisibleGameObject*>::const_iterator itr = _gameObjects.begin();
 	float timeDelta = Game::GetElapsedTime().asSeconds();
 
 	ball->Update(timeDelta);

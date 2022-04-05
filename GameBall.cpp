@@ -1,9 +1,8 @@
 #include "GameBall.h"
 #include "Game.h"
 
-// Still studying where the physics is breaking.
 GameBall::GameBall() :
-_velocity(230.0f),
+_velocity(220.0f),
 _elapsedTimeSinceStart(0.0f),
 _pi(3.1415926f)
 {
@@ -65,6 +64,9 @@ void GameBall::Update(float elapsedTime) {
 			if (playerVelocity < 0) {
 				// moving left
 				_angle -= 20.0f;
+				if (_angle < 0) { 
+					_angle = 360.0f - _angle;
+				}
 			}
 			else if (playerVelocity > 0) {
 				_angle += 20.0f;

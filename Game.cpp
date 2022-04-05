@@ -13,8 +13,9 @@ void Game::Start() {
 
 	GameBall* ball = new GameBall();
 	ball->SetPosition((SCREEN_WIDTH / 2), (SCREEN_HEIGHT / 2) - 15);
-	_gameObjectManager.ball = ball;
+
 	_gameObjectManager.paddle1 = player1;
+	_gameObjectManager.ball = ball;
 	/*
 	* 
 	* 
@@ -22,10 +23,10 @@ void Game::Start() {
 	* However, I kept getting acccess errors and I have no idea why.
 	* Going to hard code the paddle and ball in gameObjectManager.
 	* 
-	* 
-	_gameObjectManager.Add("Paddle1", player1);
-	_gameObjectManager.Add("Ball", ball);
-	*/
+	*/ 
+	//_gameObjectManager.Add("Paddle1", player1);
+	//_gameObjectManager.Add("Ball", ball);
+
 	_gameState = Game::ShowingSplash;
 
 	while (!IsExiting()) {
