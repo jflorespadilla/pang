@@ -16,16 +16,6 @@ void Game::Start() {
 
 	_gameObjectManager.paddle1 = player1;
 	_gameObjectManager.ball = ball;
-	/*
-	* 
-	* 
-	* Ideally this is how things should be handled.
-	* However, I kept getting acccess errors and I have no idea why.
-	* Going to hard code the paddle and ball in gameObjectManager.
-	* 
-	*/ 
-	//_gameObjectManager.Add("Paddle1", player1);
-	//_gameObjectManager.Add("Ball", ball);
 
 	_gameState = Game::ShowingSplash;
 
