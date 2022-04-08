@@ -29,3 +29,5 @@ bool SFMLSoundProvider::IsSoundPlaying() {
 bool SFMLSoundProvider::IsSongPlaying() {
 	return _music.getStatus() == sf::Music::Playing;
 }
+
+// Checkpoint for coding later
