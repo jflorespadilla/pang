@@ -39,6 +39,9 @@
     <ClCompile Include="GameBall.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="SFMLSoundProvider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -60,6 +63,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="GameBall.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IAudioProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="SFMLSoundProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
