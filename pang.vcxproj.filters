@@ -42,6 +42,9 @@
     <ClCompile Include="SFMLSoundProvider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ServiceLocator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h">
@@ -69,6 +72,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="SFMLSoundProvider.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ServiceLocator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

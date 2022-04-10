@@ -1,4 +1,6 @@
 #include "Game.h"
+#include "SFMLSoundProvider.h"
+#include "ServiceLocator.h"
 
 void Game::Start() {
 	if (_gameState != Uninitialized) {
@@ -7,6 +9,9 @@ void Game::Start() {
 
 	_mainWindow.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT, 32), "Pang!");
 	
+	SFMLSoundProvider soundProvider;
+	ServiceLocator::RegisterServiceLocator(&soundProvider);
+	ServiceLocator::GetAudio()->PlaySong("Soundtrack.ogg", true);
 
 	PlayerPaddle* player1 = new PlayerPaddle();
 	player1->SetPosition((SCREEN_WIDTH/2), 700);
