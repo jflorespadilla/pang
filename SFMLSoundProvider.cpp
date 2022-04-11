@@ -22,6 +22,15 @@ void SFMLSoundProvider::PlaySong(std::string filename, bool looping) {
 	_music.play();
 }
 
+void SFMLSoundProvider::StopAllSounds() {
+	if (_sound.getStatus() == sf::Sound::Playing) {
+		_sound.stop();
+	}
+	if (_music.getStatus() == sf::Sound::Playing) {
+		_music.stop();
+	}
+}
+
 bool SFMLSoundProvider::IsSoundPlaying() {
 	return _sound.getStatus() == sf::Sound::Playing;
 }

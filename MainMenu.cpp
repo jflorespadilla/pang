@@ -1,4 +1,5 @@
 #include "MainMenu.h"
+#include "ServiceLocator.h"
 
 MainMenu::MenuResult MainMenu::Show(sf::RenderWindow& renderWindow) {
     sf::Texture image;
@@ -49,6 +50,9 @@ MainMenu::MenuResult MainMenu::GetMenuResponse(sf::RenderWindow& renderWindow) {
     while (true) {
         while (renderWindow.pollEvent(menuEvent)) {
             if (menuEvent.type == sf::Event::MouseButtonPressed) {
+                if (ServiceLocator::GetAudio()->IsSongPlaying()) {
+                    ServiceLocator::GetAudio()->StopAllSounds();
+                }
                 return HandleClick(menuEvent.mouseButton.x, menuEvent.mouseButton.y);
             }
             if (menuEvent.type == sf::Event::Closed) {
