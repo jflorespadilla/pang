@@ -1,5 +1,6 @@
 #include "GameBall.h"
 #include "Game.h"
+#include "ServiceLocator.h"
 
 GameBall::GameBall() :
 _velocity(220.0f),
@@ -74,6 +75,7 @@ void GameBall::Update(float elapsedTime) {
 					_angle = _angle - 360.0f;
 				}
 			}
+			ServiceLocator::GetAudio()->PlaySound("kaboom.wav");
 			_velocity += 5.0f;
 		}
 
