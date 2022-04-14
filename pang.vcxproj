@@ -163,6 +163,7 @@
     <ClCompile Include="PlayerPaddle.cpp" />
     <ClCompile Include="ServiceLocator.cpp" />
     <ClCompile Include="SFMLSoundProvider.cpp" />
+    <ClCompile Include="SoundFileCache.cpp" />
     <ClCompile Include="SplashScreen.cpp" />
     <ClCompile Include="VisibleGameObject.cpp" />
   </ItemGroup>
@@ -175,6 +176,7 @@
     <ClInclude Include="PlayerPaddle.h" />
     <ClInclude Include="ServiceLocator.h" />
     <ClInclude Include="SFMLSoundProvider.h" />
+    <ClInclude Include="SoundFileCache.h" />
     <ClInclude Include="SplashScreen.h" />
     <ClInclude Include="VisibleGameObject.h" />
   </ItemGroup>

@@ -3,7 +3,7 @@
 
 class IAudioProvider {
 public:
-	virtual ~IAudioProvider() {}
+	virtual ~IAudioProvider() = 0;
 	virtual void PlaySound(std::string filename) = 0;
 	virtual void PlaySong(std::string filename, bool looping) = 0;
 	virtual void StopAllSounds() = 0;
