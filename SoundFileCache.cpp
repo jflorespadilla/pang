@@ -31,6 +31,16 @@ sf::Sound SoundFileCache::GetSound(std::string soundName) const {
 	throw SoundNotFoundException(soundName + "wasn not found in call to SoundFileCahce::GetSound");
 }
 
-sf::Music* SoundFileCache::GetSong(std::string SoundName) const {
-
+sf::Music* SoundFileCache::GetSong(std::string soundName) const {
+	std::map<std::string, sf::Music*>::iterator itr = _music.find(soundName);
+	if (itr == _music.end()) {
+		sf::Music* song = new sf::Music();
+		if (!song->openFromFile(soundName)) {
+			delete song;
+			throw SoundNotFoundException(soundName + "was not found in call to SoundFileCache::GetSong");
+		}
+		else {
+			// Still writing stuff up
+		}
+	}
 }
