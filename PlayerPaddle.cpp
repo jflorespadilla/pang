@@ -43,7 +43,7 @@ void PlayerPaddle::Update(float elapsedTime) {
 
 	sf::Vector2f pos = this->GetPosition();
 	if (pos.x < GetSprite().getScale().x/2
-		|| pos.x > (Game::SCREEN_WIDTH - GetSprite().getScale().x/2))
+		|| pos.x >= (Game::SCREEN_WIDTH - GetSprite().getScale().x/2))
 	{
 		_velocity = -_velocity;
 	}

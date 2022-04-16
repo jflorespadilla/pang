@@ -20,7 +20,7 @@ void SFMLSoundProvider::PlaySound(std::string filename) {
 			_currentSounds[availChannel] = _soundFileCache.GetSound(filename);
 			_currentSounds[availChannel].play();
 		}
-		catch(SoundNotFoundException& snfe) {
+		catch(SoundNotFoundException&) {
 			// Nothing happens
 		}
 	}
@@ -73,7 +73,7 @@ bool SFMLSoundProvider::IsSoundPlaying() {
 
 bool SFMLSoundProvider::IsSongPlaying() {
 	if (_currentSongName != "") {
-		return _soundFileCache.GetSong(_currentSongName)->GetStatus() == sf::Music::Playing;
+		return _soundFileCache.GetSong(_currentSongName)->getStatus() == sf::Music::Playing;
 	}
 	return false;
 }

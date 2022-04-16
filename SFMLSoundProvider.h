@@ -8,6 +8,7 @@ class SFMLSoundProvider :
 {
 public:
     SFMLSoundProvider();
+    //~SFMLSoundProvider();
 
     void PlaySound(std::string filename);
     void PlaySong(std::string filename, bool looping = false);
@@ -19,7 +20,7 @@ public:
 private:
     static const int MAX_SOUND_CHANNELS = 5;
 
-    SoundFIleCache _soundFileCache;
+    SoundFileCache _soundFileCache;
     sf::Sound _currentSounds[MAX_SOUND_CHANNELS];
     std::string _currentSongName;
 };

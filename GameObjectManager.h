@@ -11,6 +11,7 @@ public:
 	int GameObjectCount() const;
 	VisibleGameObject* Get(std::string name) const;
 	VisibleGameObject* paddle1;
+	VisibleGameObject* paddle2;
 	VisibleGameObject* ball;
 
 	void DrawAll(sf::RenderWindow& renderWindow);

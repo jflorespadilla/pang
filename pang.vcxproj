@@ -155,6 +155,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AIPaddle.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameBall.cpp" />
     <ClCompile Include="GameObjectManager.cpp" />
@@ -168,6 +169,7 @@
     <ClCompile Include="VisibleGameObject.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AIPaddle.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="GameBall.h" />
     <ClInclude Include="GameObjectManager.h" />

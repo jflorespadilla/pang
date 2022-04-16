@@ -41,6 +41,7 @@ void GameObjectManager::DrawAll(sf::RenderWindow& renderWindow) {
 	}*/
 	ball->Draw(renderWindow);
 	paddle1->Draw(renderWindow);
+	paddle2->Draw(renderWindow);
 }
 
 void GameObjectManager::UpdateAll() {
@@ -49,6 +50,7 @@ void GameObjectManager::UpdateAll() {
 
 	ball->Update(timeDelta);
 	paddle1->Update(timeDelta);
+	paddle2->Update(timeDelta);
 
 	/*while (itr != _gameObjects.end()) {
 		itr->second->Update(timeDelta);

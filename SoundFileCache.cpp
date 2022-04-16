@@ -13,7 +13,7 @@ sf::Sound SoundFileCache::GetSound(std::string soundName) const {
 		sf::SoundBuffer* soundBuffer = new sf::SoundBuffer();
 		if (!soundBuffer->loadFromFile(soundName)) {
 			delete soundBuffer;
-			throw SoundNotFoundException(soundName + "was not found in call to SoundFileCache::GetSound");
+			throw SoundNotFoundException(soundName + " was not found in call to SoundFileCache::GetSound");
 		}
 
 		std::map<std::string, sf::SoundBuffer*>::iterator res =
@@ -28,7 +28,7 @@ sf::Sound SoundFileCache::GetSound(std::string soundName) const {
 		sound.setBuffer(*itr->second);
 		return sound;
 	}
-	throw SoundNotFoundException(soundName + "wasn not found in call to SoundFileCahce::GetSound");
+	throw SoundNotFoundException(soundName + " was not found in call to SoundFileCahce::GetSound");
 }
 
 sf::Music* SoundFileCache::GetSong(std::string soundName) const {
@@ -37,10 +37,19 @@ sf::Music* SoundFileCache::GetSong(std::string soundName) const {
 		sf::Music* song = new sf::Music();
 		if (!song->openFromFile(soundName)) {
 			delete song;
-			throw SoundNotFoundException(soundName + "was not found in call to SoundFileCache::GetSong");
+			throw SoundNotFoundException(soundName + " was not found in call to SoundFileCache::GetSong");
 		}
 		else {
-			// Still writing stuff up
+			std::map<std::string, sf::Music*>::iterator res =
+				_music.insert(std::pair<std::string, sf::Music*>(soundName, song)).first;
+			return res->second;
 		}
 	}
+	else {
+		return itr->second;
+	}
+	throw SoundNotFoundException(soundName + " was not found in call to SoundFileCache::GetSong");
 }
+
+std::map<std::string, sf::SoundBuffer*> SoundFileCache::_sounds;
+std::map<std::string, sf::Music*> SoundFileCache::_music;

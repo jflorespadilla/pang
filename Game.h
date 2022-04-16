@@ -4,6 +4,7 @@
 #include "SplashScreen.h"
 #include "MainMenu.h"
 #include "PlayerPaddle.h"
+#include "AIPaddle.h"
 #include "GameBall.h"
 #include "GameObjectManager.h"
 
